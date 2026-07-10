@@ -97,11 +97,11 @@ export default function FanFestPage() {
     );
   };
 
-  const scrollTo = (id) => {
+  const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Wire this up to your API route / Firebase Function / form service.
     // e.g. await fetch('/api/apply', { method: 'POST', body: new FormData(e.target) })
