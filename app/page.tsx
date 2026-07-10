@@ -87,11 +87,11 @@ const TIMELINE = [
 ];
 
 export default function FanFestPage() {
-  const [openFaq, setOpenFaq] = useState(null);
-  const [platforms, setPlatforms] = useState([]);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [platforms, setPlatforms] = useState<string[]>([]);
   const [submitted, setSubmitted] = useState(false);
 
-  const togglePlatform = (name) => {
+  const togglePlatform = (name:string) => {
     setPlatforms((prev) =>
       prev.includes(name) ? prev.filter((p) => p !== name) : [...prev, name]
     );
